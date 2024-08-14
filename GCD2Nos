@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+      System.out.println("Hello, World!");
+      int a, b;
+      Scanner in = new Scanner(System.in);
+      a = in.nextInt();
+      b = in.nextInt();
+      
+      int result = (a < b) ? a : b;
+      System.out.println("Minimum "+result);
+      
+      while(result>0)
+      {
+        if(a%result == 0 && b%result == 0)
+        {
+          break;
+        }
+        result--;
+      }
+      System.out.println("GCD is: "+result);
+  }
+}
+
+INPUT: 98 56
+OUTPUT 1:
+Hello, World!
+Minimum 56
+GCD is: 14
+
+INPUT: 23 12
+OUTPUT 2:
+Hello, World!
+Minimum 12
+GCD is: 1
